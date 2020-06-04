@@ -100,11 +100,20 @@
             </div>
             <div class="col-sm-12 col-md-12 col-lg-7 w-100 h-100 p-0  position-relative">
                 <div id="draggable" class="img_wrapper mx-auto">
+                    <input type="file" style="display: none" id="inpimg">
                     <img id="image_to_edit" src="static/doctor-5216835.png" alt="">
-                    <div class="zoom-wrapper rounded shadow">
-                        <i id="zoomin" class="fas fa-plus pr-3"></i>
-                        <i id="zoomout" class="fas fa-minus pl-3"></i>
+                    <div class="toolbar">
+                        <div class="toolbar-contents">
+                            <label class="btn btn-sm btn-success bb" onclick="readURL(this);" for="inpimg">
+                                    Change Image
+                            </label>
+                            <div class="zoom-wrapper rounded shadow">
+                                <i id="zoomin" class="fas fa-plus pr-3"></i>
+                                <i id="zoomout" class="fas fa-minus pl-3"></i>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -74,11 +74,11 @@ body,html{
 
 }
 .zoom-wrapper{
-  position: fixed;
+  position: absolute;
   top: 10px;
     right: 10px;
     padding: 7px;
-    background: #1c7430;
+    background: #28A745;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -86,9 +86,25 @@ body,html{
     cursor: pointer;
 
 }
+.toolbar{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 50px;
+    width: 100%;
+}
+.toolbar-contents{
+    position: relative;
+    width: 100%;
+}
 .zoom-wrapper i:first-child{
     border-right: 1px solid white;
 }
 .zoom-wrapper i:last-child{
     border-left: 1px solid white;
+}
+.bb{
+    position: absolute;
+    right: 100px;
+    top: 11px;
 }
