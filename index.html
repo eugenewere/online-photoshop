@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="static/mycss.css" >
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://kit.fontawesome.com/16d33ecbbb.js" ></script>
+    <link rel="stylesheet" href="static/main.css" >
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+<div class="container-fluid m-0 p-0 vh-100 ">
+    <div class="col-sm-12 h-100 w-100 m-0 p-0">
+        <div class="row h-100 w-100 m-0 p-0">
+            <div class="col-sm-12 col-md-12 col-lg-5 py-5 ">
+                <div class="col-sm-11 mx-auto bgwhitw p-0 shadow-lg rounded">
+                    <div class=" px-2 py-4 corntrol-div">
+                        <div class="col-sm-12 controlers">
+                            <label for="customRange2">Brightness </label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                            </span>
+                            <input type="range" data-filter="brightness"  class="custom-range" step="0.2" value="0" min="0"  max="5" id="customRange2">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Blur">Blur </label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> px</span>
+                            </span>
+                            <input type="range" data-filter="blur" class="custom-range" step="1" value="0" min="0"  max="20" id="Blur">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Contrast">Contrast</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="contrast" class="custom-range" step="1" value="0" min="0"  max="500" id="Contrast">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Grayscale">Grayscale</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="grayscale" class="custom-range" step="1" value="0" min="0"  max="100" id="Grayscale">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Hue-Rotate">Hue Rotate</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> deg</span>
+                            </span>
+                            <input type="range" data-filter="hue-rotate" class="custom-range" step="1" value="0" min="0"  max="360" id="Hue-Rotate">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Invert">Invert</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="invert" class="custom-range" step="1" value="0" min="0"  max="100" id="Invert">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Opacity">Opacity</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="opacity" class="custom-range" step="1" value="0" min="0"  max="100" id="Opacity">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Saturate">Saturate</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="saturate" class="custom-range" step="1" value="0" min="0"  max="500" id="Saturate">
+                        </div>
+                        <div class="col-sm-12 controlers">
+                            <label for="Sepia">Sepia</label>
+                            <span class="result-wrapper">
+                                <em> 0 </em>
+                                <span> %</span>
+                            </span>
+                            <input type="range" data-filter="sepia" class="custom-range" step="1" value="0" min="0"  max="100" id="Sepia">
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-7 w-100 h-100 p-0  position-relative">
+                <div id="draggable" class="img_wrapper mx-auto">
+                    <img id="image_to_edit" src="static/doctor-5216835.png" alt="">
+                    <div class="zoom-wrapper rounded shadow">
+                        <i id="zoomin" class="fas fa-plus pr-3"></i>
+                        <i id="zoomout" class="fas fa-minus pl-3"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="static/jquery.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<script src="static/main.js"></script>
+<script>
+
+</script>
+</body>
+</html>
