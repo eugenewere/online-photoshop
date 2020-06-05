@@ -18,7 +18,7 @@
 <div class="container-fluid m-0 p-0 vh-100 ">
     <div class="col-sm-12 h-100 w-100 m-0 p-0">
         <div class="row h-100 w-100 m-0 p-0">
-            <div class="col-sm-12 col-md-12 col-lg-5 py-5 ">
+            <div class="col-sm-12 col-md-12 col-lg-6 py-5 ">
                 <div class="col-sm-11 mx-auto bgwhitw p-0 shadow-lg rounded">
                     <div class=" px-2 py-4 corntrol-div">
                         <div class="col-sm-12 controlers">
@@ -98,13 +98,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-7 w-100 h-100 p-0  position-relative">
+            <div id="tt" class="col-sm-12 col-md-12 col-lg-6 w-100 h-100 p-0  position-relative">
                 <div id="draggable" class="img_wrapper mx-auto">
-                    <input type="file" style="display: none" id="inpimg">
-                    <img id="image_to_edit" src="static/doctor-5216835.png" alt="">
+                    <input onchange="readURL(this);" type="file" name="mmm" style="display: none" id="inpimg">
+
+                    <div class="col-sm-12 col-md-9 p-0 " style="height: 80%; width: 80%; margin: auto; line-height: 50;">
+                        <img id="image_to_edit" src="static/imges/doctor-5216835.png" alt="">
+                    </div>
                     <div class="toolbar">
                         <div class="toolbar-contents">
-                            <label class="btn btn-sm btn-success bb" onclick="readURL(this);" for="inpimg">
+                            <button data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-success bb" style="right: 200px">
+                                Gallery
+                            </button>
+                            <label class="btn btn-sm btn-success bb" for="inpimg">
                                     Change Image
                             </label>
                             <div class="zoom-wrapper rounded shadow">
@@ -119,12 +125,62 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade carousel-fade" id="exampleModal" tabindex="-5" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header" style="padding: 4px 6px;">
+                <h5 class="modal-title" id="exampleModalLabel">Gallery</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/doctor-5216835.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/cartoon-1299532.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/cartoon-2022468.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/img1.jpg" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/img2.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/img3.jpg" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/people-2013447.jpg" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/pirate-2123313_1920.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/teacher-359311.png" alt="">
+                        </div>
+                        <div class="col-sm-12 col-md-6">
+                            <img class="img-fluid" src="static/imges/zombie-521243.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="static/jquery.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+<script src="static/popper.js" ></script>
+<script src="static/bootstrap.js" ></script>
 <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
 <script src="static/main.js"></script>
 <script>

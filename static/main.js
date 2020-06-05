@@ -1,3 +1,22 @@
+function readURL(input) {
+    // var input =  $('#inpimg');
+    // var input =  $(inputt).parent().parent().parent().find('input');
+
+    if (input.files && input.files[0]) {
+        console.log(input);
+        var reader = new FileReader();
+        console.log(reader);
+
+        reader.onload = function (e) {
+            console.log(e, e.target, e.target.result);
+            $('#image_to_edit').attr('src', e.target.result);
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
+
 
 
 var timeout;
@@ -7,9 +26,9 @@ $('.custom-range').each(function () {
     var $indicator = $(this).parent().find('em');
 
 
-   $(this).change(function () {
-      $indicator.text(this.value);
-   });
+    $(this).change(function () {
+       $indicator.text(this.value);
+    });
     $(this).mousedown( function () {
         $(this).mousemove( function(){
             var valu = this.value;
@@ -26,51 +45,86 @@ $('.custom-range').each(function () {
     });
 
 });
+$('.custom-range').mouseup( function(){
+    $('#tt').mousemove( function() {
+        $('.custom-range').css('visibility', 'visible');
+    });
+});
+let star = {
+    blur: "",
+    brightness: "",
+    contrast: "",
+    grayscale: "",
+    hue: "",
+    invert: "",
+    opacity: "",
+    saturate: "",
+    sepia: "",
+};
+let allStyles = function () {
+    return `${star.blur} ${star.brightness} ${star.contrast} ${star.grayscale} ${star.hue} ${star.invert} ${star.opacity} ${star.saturate} ${star.sepia}`;
+};
+function showFilter() {
+    var design = allStyles();
+    $('#image_to_edit').css("filter", design);
+
+
+}
 
 function changeImage(v, f){
-    console.log(f, v);
+    // console.log(f, v);
     var image = document.getElementById('image_to_edit');
     switch (f) {
         case "brightness":
-            image.style.filter = "brightness("+ v +")";
-            image.style.webkitFilter = "brightness("+ v +")";
+            star.brightness="brightness("+ v +")";
+            // image.style.filter = "brightness("+ v +")";
+            // image.style.webkitFilter = "brightness("+ v +")";
             break;
         case "blur":
-             image.style.filter = "blur("+v+"px)";
-             image.style.webkitFilter = "blur("+v+"px)";
+             star.blur="blur("+v+"px)";
+             // image.style.filter = "blur("+v+"px)";
+             // image.style.webkitFilter = "blur("+v+"px)";
             break;
         case "contrast":
-             image.style.filter = "contrast("+v+"%)";
-             image.style.webkitFilter = "contrast("+v+"%)";
+             star.contrast = "contrast("+v+"%)";
+             // image.style.filter = "contrast("+v+"%)";
+             // image.style.webkitFilter = "contrast("+v+"%)";
             break;
         case "grayscale":
-             image.style.filter = "grayscale("+v+"%)";
-             image.style.webkitFilter = "grayscale("+v+"%)";
+             star.grayscale = "grayscale("+v+"%)";
+             // image.style.filter = "grayscale("+v+"%)";
+             // image.style.webkitFilter = "grayscale("+v+"%)";
             break;
         case "hue-rotate":
-             image.style.filter = "hue-rotate("+v+"deg)";
-             image.style.webkitFilter = "hue-rotate("+v+"deg)";
+             star.hue = "hue-rotate("+v+"deg)";
+             // image.style.filter = "hue-rotate("+v+"deg)";
+             // image.style.webkitFilter = "hue-rotate("+v+"deg)";
             break;
         case "invert":
-             image.style.filter = "invert("+v+"%)";
-             image.style.webkitFilter = "invert("+v+"%)";
+            star.invert = "invert("+v+"%)";
+             // image.style.filter = "invert("+v+"%)";
+             // image.style.webkitFilter = "invert("+v+"%)";
             break;
         case "opacity" :
-             image.style.filter = "opacity("+v+"%)";
-             image.style.webkitFilter = "opacity("+v+"%)";
+            star.opacity = "opacity("+v+"%)";
+             // image.style.filter = "opacity("+v+"%)";
+             // image.style.webkitFilter = "opacity("+v+"%)";
             break;
         case "saturate":
-             image.style.filter = "saturate("+v+"%)";
-             image.style.webkitFilter = "saturate("+v+"%)";
+            star.saturate = "saturate("+v+"%)";
+             // image.style.filter = "saturate("+v+"%)";
+             // image.style.webkitFilter = "saturate("+v+"%)";
             break;
         case "sepia":
-             image.style.filter = "sepia("+v+"%)";
-             image.style.webkitFilter = "sepia("+v+"%)";
+             star.sepia = "sepia("+v+"%)";
+             // image.style.filter = "sepia("+v+"%)";
+             // image.style.webkitFilter = "sepia("+v+"%)";
             break;
         default:
             image.style.filter ="none";
             image.style.webkitFilter ="none";
     }
+    showFilter();
 }
 
 
@@ -89,29 +143,32 @@ var scale = 1;
 // console.log($imageWidth);
 
 $('#zoomin').click(function () {
-    var newScale = scale + 0.02;
-    image.style.transform = 'scale('+ newScale +')';
-    scale = newScale;
+    $(this).mousedown(function () {
+        var newScale = scale + 0.02;
+        image.style.transform = 'scale('+ newScale +')';
+        scale = newScale;
+    });
 });
 
-$('#zoomout').click( function(){
-    var newScale = scale - 0.02;
-    image.style.transform = 'scale('+ newScale +')';
-    scale = newScale;
+$('#zoomout').click(function(){
+
+    $(this).mousedown(function () {
+        var newScale = scale - 0.02;
+        image.style.transform = 'scale(' + newScale + ')';
+        scale = newScale;
+    });
 });
 
 
-function readURL(inputt) {
-   var input =  $(inputt).parent().parent().parent().find('input');
-   console.log(input);
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            $('#image_to_edit').attr('src', e.target.result);
-        };
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+$(".img-fluid").click(function () {
+   $(this).each(function () {
+       var src = $(this).attr('src');
+       $('#exampleModal').modal('hide');
+       setTimeout( $("#image_to_edit").attr('src', src).fadeIn(),2000)
+
+
+   });
+});
 
 
 

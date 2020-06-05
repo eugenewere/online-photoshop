@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f802eb0-ff40-4de6-a5c5-dbdd3f805292" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/cartoon-1299532.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/cartoon-2022468.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/img2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/people-2013447.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/pirate-2123313_1920.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/teacher-359311.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/imges/zombie-521243.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/popper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/doctor-5216835.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/imges/doctor-5216835.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,12 +42,16 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../receipt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\myprojectx\OnlinePhotoshop\static\imges" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\myprojectx\OnlinePhotoshop\static" />
+      <recent name="C:\myprojectx\OnlinePhotoshop\static\imges" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -72,7 +86,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591270681651</updated>
-      <workItem from="1591270683109" duration="31148000" />
+      <workItem from="1591270683109" duration="33103000" />
+      <workItem from="1591376815547" duration="12695000" />
     </task>
     <servers />
   </component>
@@ -84,7 +99,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
