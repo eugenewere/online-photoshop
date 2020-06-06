@@ -19,16 +19,19 @@
     <div class="col-sm-12 h-100 w-100 m-0 p-0">
         <div class="row h-100 w-100 m-0 p-0">
             <div class="col-sm-12 col-md-12 col-lg-6 py-5 ">
-                <div class="col-sm-11 mx-auto bgwhitw p-0 shadow-lg rounded">
-                    <div class=" px-2 py-4 corntrol-div">
-                        <div class="col-sm-12 controlers">
+                <div class="col-sm-11 mx-auto bgwhitw p-0 shadow-lg rounded corntrol-div">
+                    <div class=" row px-2 py-4 ">
+                        <div class="col-sm-12 py-0">
+                          <h3 class="w-100 text-muted">Filter</h3>
+                        </div>
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="customRange2">Brightness </label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
                             </span>
                             <input type="range" data-filter="brightness"  class="custom-range" step="0.2" value="0" min="0"  max="5" id="customRange2">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Blur">Blur </label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -36,7 +39,7 @@
                             </span>
                             <input type="range" data-filter="blur" class="custom-range" step="1" value="0" min="0"  max="20" id="Blur">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Contrast">Contrast</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -44,7 +47,7 @@
                             </span>
                             <input type="range" data-filter="contrast" class="custom-range" step="1" value="0" min="0"  max="500" id="Contrast">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Grayscale">Grayscale</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -52,7 +55,7 @@
                             </span>
                             <input type="range" data-filter="grayscale" class="custom-range" step="1" value="0" min="0"  max="100" id="Grayscale">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Hue-Rotate">Hue Rotate</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -60,7 +63,7 @@
                             </span>
                             <input type="range" data-filter="hue-rotate" class="custom-range" step="1" value="0" min="0"  max="360" id="Hue-Rotate">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Invert">Invert</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -68,7 +71,7 @@
                             </span>
                             <input type="range" data-filter="invert" class="custom-range" step="1" value="0" min="0"  max="100" id="Invert">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Opacity">Opacity</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -76,7 +79,7 @@
                             </span>
                             <input type="range" data-filter="opacity" class="custom-range" step="1" value="0" min="0"  max="100" id="Opacity">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-6 controlers">
                             <label for="Saturate">Saturate</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -84,7 +87,7 @@
                             </span>
                             <input type="range" data-filter="saturate" class="custom-range" step="1" value="0" min="0"  max="500" id="Saturate">
                         </div>
-                        <div class="col-sm-12 controlers">
+                        <div class="col-sm-12 px-4 col-md-12 controlers">
                             <label for="Sepia">Sepia</label>
                             <span class="result-wrapper">
                                 <em> 0 </em>
@@ -92,24 +95,69 @@
                             </span>
                             <input type="range" data-filter="sepia" class="custom-range" step="1" value="0" min="0"  max="100" id="Sepia">
                         </div>
-
-
-
                     </div>
+                    <div class=" row px-2 py-4 ">
+                        <div class="col-sm-12 py-0">
+                            <h3 class="w-100 text-muted">Sharpness</h3>
+                        </div>
+                        <div class="col-sm-12 col-md-12">
+                            <div class="custom-control custom-radio">
+                                <input value="initial" type="radio" id="initial" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="initial">Initial</label>
+                            </div>
+                             <div class="custom-control custom-radio">
+                                <input value="smooth" type="radio" id="Smooth" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="Smooth">Smooth</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input value="pixelated" type="radio" id="pixelated" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="pixelated">Pixelated</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input value="crisp-edges" type="radio" id="Crisp-edges" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="Crisp-edges">Crisp-edges</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input value="high-quality" type="radio" id="high-quality" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="high-quality">High-quality</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input value="optimizeQuality" type="radio" id="optimizeQuality" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="optimizeQuality">Optimize Quality</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input value="optimizeSpeed" type="radio" id="optimizeSpeed" name="customRadio" class="custom-control-input cradio">
+                                <label class="custom-control-label " for="optimizeSpeed">Optimize Speed</label>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div id="tt" class="col-sm-12 col-md-12 col-lg-6 w-100 h-100 p-0  position-relative">
                 <div id="draggable" class="img_wrapper mx-auto">
                     <input onchange="readURL(this);" type="file" name="mmm" style="display: none" id="inpimg">
 
-                    <div class="col-sm-12 col-md-9 p-0 " style="height: 80%; width: 80%; margin: auto; line-height: 50;">
+                    <div id="img-wr" class="col-sm-12 col-md-9 p-0 " style="height: 80%; width: 80%; margin: auto; line-height: 50;">
                         <img id="image_to_edit" src="static/imges/doctor-5216835.png" alt="">
+
                     </div>
+
                     <div class="toolbar">
                         <div class="toolbar-contents">
-                            <button data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-success bb" style="right: 200px">
-                                Gallery
+                            <button id="rotateImg" class="btn btn-success btn-sm bb" style="right: 306px;">
+                                <i class="fas fa-sync-alt"></i>
                             </button>
+
+                            <a onclick="generatePDF()" id="savebtn" class="btn btn-sm btn-success bb " style="right: 250px">
+                                <i class="fa fa-save"></i> Save
+                            </a>
+                            <button  data-toggle="modal" data-target="#exampleModal" class="btn btn-sm btn-success bb" style="right: 171px">
+                                Local Gallery
+                            </button>
+
                             <label class="btn btn-sm btn-success bb" for="inpimg">
                                     Change Image
                             </label>
@@ -178,9 +226,10 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="static/jquery.js"></script>
-<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="static/popper.js" ></script>
 <script src="static/bootstrap.js" ></script>
+<script src="static/html2pdf.js"></script>
 <!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
 <script src="static/main.js"></script>
 <script>

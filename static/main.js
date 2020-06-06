@@ -134,9 +134,7 @@ function changeImage(v, f){
 
 
 
-$(function() {
-    $("#image_to_edit").draggable();
-});
+
 
 var image = document.getElementById('image_to_edit');
 var scale = 1;
@@ -170,17 +168,74 @@ $(".img-fluid").click(function () {
    });
 });
 
+$("#image_to_edit").draggable();
 
 
+$('.cradio').each(function (e) {
+   $(this).change(function (e) {
+       var value = $(this).val();
+       console.log(value);
+       $("#image_to_edit").css('image-rendering', value);
+   })
+});
+
+function generatePDF() {
+    var fullPath = document.getElementById("image_to_edit").src;
+
+    var filename = fullPath.replace(/^.*[\\\/]/, '');
+    const element =document.getElementById('img-wr');
+    console.log(filename.split('.')[0]);
+    var opt = {
+        margin:       0.12,
+        filename:     filename.split('.')[0] + '.jpg',
+        image:        { type: 'jpg'},
+        html2canvas:  { scale: 1,  },
+        // jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf()
+        .from(element)
+        .set(opt)
+        .save();
 
 
+}
+// function downloadCanvas(link, canvasId, filename) {
+//     link.href = document.getElementById('image_to_edit').toDataURL();
+//     link.download = filename;
+// }
+//
+//
+// document.getElementById('savebtn').addEventListener('click', function() {
+//     var fullPath = document.getElementById("image_to_edit").src;
+//     // var fullPath2 = document.getElementById("");
+//     var filename = fullPath.replace(/^.*[\\\/]/, '');
+//     downloadCanvas(this, 'image_to_edit', filename);
+// }, false);
 
+// $('#savebtn').click(function () {
+//     var fullPath = document.getElementById("image_to_edit").src;
+//     $(this).attr('download', fullPath);
+//     $(this).attr('href', fullPath);
+// }).trigger('click');
 
+var rotate = 0;
+$('#rotateImg').click(function () {
+    var new_rotate = rotate + 90;
+    rotate=new_rotate;
+    if (new_rotate === 360){
+        rotate = 0;
+        new_rotate = 0;
+        $('#image_to_edit').css('transition', 'none');
+        $('#image_to_edit').css('transform', 'rotate('+ rotate + 'deg)');
+        $('#image_to_edit').css('transform', ' ');
+    }
+    else {
+        console.log(new_rotate);
+        $('#image_to_edit').css('transition', '1s');
+        $('#image_to_edit').css('transform', 'rotate('+ rotate + 'deg)');
+    }
 
-
-
-
-
+});
 
 
 
